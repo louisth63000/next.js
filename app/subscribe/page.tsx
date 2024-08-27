@@ -159,7 +159,7 @@ export default function Component() {
         </div>
 
         <div className="mt-12 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Vous n'êtes pas sûr ?</h2>
+          <h2 className="text-2xl font-semibold mb-4">{`Vous n'êtes pas sûr ?`}</h2>
           <p className="text-gray-600 mb-4">Comparez les fonctionnalités de chaque plan pour trouver celui qui vous convient le mieux.</p>
           <Button variant="outline">Voir la comparaison détaillée des plans</Button>
         </div>

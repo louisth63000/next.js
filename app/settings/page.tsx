@@ -217,7 +217,7 @@ export default function Component() {
                   <Switch id="profile-visibility" />
                 </div>
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="show-email">Afficher l'email publiquement</Label>
+                  <Label htmlFor="show-email">{`Afficher l'email publiquement`}</Label>
                   <Switch id="show-email" />
                 </div>
                 <div className="flex items-center justify-between">
@@ -256,7 +256,7 @@ export default function Component() {
                   </div>
                 </div>
                 <div>
-                  <Button variant="outline">Voir l'historique des transactions</Button>
+                  <Button variant="outline">{`Voir l'historique des transactions`}</Button>
                 </div>
               </CardContent>
             </Card>
@@ -265,7 +265,7 @@ export default function Component() {
           <TabsContent value="subscription">
             <Card>
               <CardHeader>
-                <CardTitle>Gestion de l'Abonnement</CardTitle>
+                <CardTitle>{`Gestion de l'Abonnement`}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -273,7 +273,7 @@ export default function Component() {
                   <span className="text-xl font-bold">{currentUser.subscription}</span>
                 </div>
                 <div className="space-y-2">
-                  <Label>Changer d'Abonnement</Label>
+                  <Label>{`Changer d'Abonnement`}</Label>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <Button variant="outline">Basic</Button>
                     <Button variant="outline">Pro</Button>
@@ -288,7 +288,7 @@ export default function Component() {
                   </div>
                 </div>
                 <div>
-                  <Button variant="outline">Voir l'historique de facturation</Button>
+                  <Button variant="outline">{`Voir l'historique de facturation`}</Button>
                 </div>
               </CardContent>
             </Card>

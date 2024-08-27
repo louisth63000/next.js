@@ -188,7 +188,7 @@ export default function Component() {
                       </label>
                       <p className="pl-1">ou glisser-déposer</p>
                     </div>
-                    <p className="text-xs text-gray-500">PNG, JPG, GIF jusqu'à 10MB</p>
+                    <p className="text-xs text-gray-500">{`PNG, JPG, GIF jusqu'à 10MB`}</p>
                   </div>
                 </div>
               </div>

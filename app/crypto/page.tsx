@@ -33,7 +33,7 @@ export default function Component() {
 
   const currentUser = {
     name: "John Doe",
-    avatar: "/placeholder.svg?height=32&width=32",
+    avatar: "https://placehold.co/32",
     ggstBalance: 1000, // User's GGST balance
   }
 
@@ -141,9 +141,9 @@ export default function Component() {
           </CardHeader>
           <CardContent>
             <p className="text-gray-600">
-              GGST (GG Start Token) is the official cryptocurrency of the start.gg platform. 
+              {`GGST (GG Start Token) is the official cryptocurrency of the start.gg platform. 
               It's used for tournament entry fees, prize pools, and various in-platform transactions. 
-              As the popularity of esports grows, so does the value and utility of GGST.
+              As the popularity of esports grows, so does the value and utility of GGST. `}
             </p>
           </CardContent>
         </Card>

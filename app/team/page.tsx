@@ -145,10 +145,10 @@ export default function Component() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Team Awesome is a professional esports team competing in various games. 
+                 {` Team Awesome is a professional esports team competing in various games. 
                   Founded in 2020, we've quickly risen through the ranks to become one of 
                   the top teams in the region. Our goal is to dominate the competitive scene 
-                  and inspire the next generation of gamers.
+                  and inspire the next generation of gamers. `}
                 </p>
               </CardContent>
             </Card>
