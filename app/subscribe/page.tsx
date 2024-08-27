@@ -15,7 +15,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-const PlanCard = ({ title, price, features, recommended = false }) => (
+interface PlanCardProps {
+  title: string;
+  price: number;
+  features: string[];
+  recommended?: boolean;
+}
+const PlanCard = ({ title, price, features, recommended = false }: PlanCardProps) => (
   <Card className={`flex flex-col ${recommended ? 'border-blue-500 border-2' : ''}`}>
     <CardHeader>
       <CardTitle className="text-2xl">{title}</CardTitle>

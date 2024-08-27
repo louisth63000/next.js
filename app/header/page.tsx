@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+import { useState,FormEvent } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -31,11 +31,12 @@ export default function Component() {
     avatar: "/placeholder.svg?height=32&width=32"
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted')
-  }
+
+const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  // Handle form submission here
+  console.log('Form submitted');
+}
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">

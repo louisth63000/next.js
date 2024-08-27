@@ -20,10 +20,10 @@ export default function Component() {
     avatar: "https://placehold.co/32"
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     // Handle form submission here
-    console.log('Form submitted')
+    console.log('Form submitted');
   }
 
   return (

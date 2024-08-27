@@ -5,7 +5,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, MenuIcon, SearchIcon, FilterIcon, ChevronUpIcon, CoinsIcon, BellIcon } from 'lucide-react'
 
-const PlayerRankCard = ({ rank, name, score, avatar, cryptoGain }) => (
+
+interface PlayerRankCardProps {
+  rank: number;
+  name: string;
+  score: number;
+  avatar: string;
+  cryptoGain: string;
+}
+const PlayerRankCard = ({ rank, name, score, avatar, cryptoGain }: PlayerRankCardProps) => (
   <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow">
     <div className="text-2xl font-bold w-8 text-center">{rank}</div>
     <img src={avatar} alt={name} className="w-12 h-12 rounded-full" />
@@ -20,9 +28,18 @@ const PlayerRankCard = ({ rank, name, score, avatar, cryptoGain }) => (
       </div>
     </div>
   </div>
-)
+);
 
-const PersonalRankCard = ({ rank, name, score, avatar, change, cryptoGain }) => (
+
+interface PersonalRankCardProps {
+  rank: number;
+  name: string;
+  score: number;
+  avatar: string;
+  change: string;
+  cryptoGain: string;
+}
+const PersonalRankCard = ({ rank, name, score, avatar, change, cryptoGain }: PersonalRankCardProps) => (
   <div className="flex items-center space-x-4 p-6 bg-blue-50 rounded-lg shadow border border-blue-200">
     <div className="text-3xl font-bold w-12 text-center">{rank}</div>
     <img src={avatar} alt={name} className="w-16 h-16 rounded-full" />
@@ -42,7 +59,7 @@ const PersonalRankCard = ({ rank, name, score, avatar, change, cryptoGain }) => 
       </div>
     </div>
   </div>
-)
+);
 
 export default function Component() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

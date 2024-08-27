@@ -6,7 +6,22 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, MenuIcon, HomeIcon, LinkIcon, FilterIcon, TwitterIcon, TwitchIcon } from 'lucide-react'
 
-const MatchRow = ({ round, player1, player2, score1, score2, status, scheduledTime }) => (
+interface MatchRowProps {
+  round: string;
+  player1: {
+    name: string;
+    fullName: string;
+  };
+  player2: {
+    name: string;
+    fullName: string;
+  };
+  score1?: number;
+  score2?: number;
+  status: string
+  scheduledTime?: string;
+}
+const MatchRow = ({ round, player1, player2, score1, score2, status, scheduledTime }: MatchRowProps) => (
   <div className="border-b last:border-b-0 py-4">
     <div className="text-sm text-gray-500 mb-2">{round}</div>
     <div className="flex justify-between items-center">

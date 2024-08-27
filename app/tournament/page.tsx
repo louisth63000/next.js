@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, MenuIcon, HomeIcon, LinkIcon } from 'lucide-react'
 
-const AttendeeCard = ({ initial, name, username }) => (
+const AttendeeCard = ({ initial, name, username }: { initial: string; name: string; username: string }) => (
   <div className="flex items-center space-x-2 p-2 bg-gray-100 rounded-md">
     <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
       {initial}
@@ -16,7 +16,12 @@ const AttendeeCard = ({ initial, name, username }) => (
   </div>
 )
 
-const AdminCard = ({ initial, name, role }) => (
+interface AdminCardProps {
+  initial: string;
+  name: string;
+  role: string;
+}
+const AdminCard = ({ initial, name, role }: AdminCardProps) => (
   <div className="flex items-center space-x-2 p-2">
     <div className="w-8 h-8 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center font-bold">
       {initial}

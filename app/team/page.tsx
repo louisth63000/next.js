@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, MenuIcon, BellIcon, UserIcon, GlobeIcon } from 'lucide-react'
 
-const TeamMemberCard = ({ name, role, avatar }) => (
+interface TeamMemberCardProps {
+  name: string;
+  role: string;
+  avatar: string;
+}
+const TeamMemberCard = ({ name, role, avatar }: TeamMemberCardProps) => (
   <div className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow">
     <img src={avatar} alt={name} className="w-12 h-12 rounded-full" />
     <div>
@@ -14,7 +19,13 @@ const TeamMemberCard = ({ name, role, avatar }) => (
   </div>
 )
 
-const CompetitionCard = ({ name, date, result, game }) => (
+interface CompetitionCardProps {
+  name: string;
+  date: string;
+  result: string;
+  game: string;
+}
+const CompetitionCard = ({ name, date, result, game }: CompetitionCardProps) => (
   <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow">
     <div>
       <h3 className="font-semibold">{name}</h3>

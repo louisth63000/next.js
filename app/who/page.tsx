@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { TrophyIcon, MenuIcon, BellIcon, UsersIcon, GlobeIcon, AwardIcon, RocketIcon } from 'lucide-react'
 
-const TeamMemberCard = ({ name, role, avatar }) => (
+interface TeamMemberCardProps {
+  name: string;
+  role: string;
+  avatar: string;
+}
+const TeamMemberCard = ({ name, role, avatar }: TeamMemberCardProps) => (
   <Card>
     <CardContent className="flex flex-col items-center p-6">
       <img src={avatar} alt={name} className="w-24 h-24 rounded-full mb-4" />

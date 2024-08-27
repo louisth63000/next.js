@@ -6,7 +6,13 @@ import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, MenuIcon, HomeIcon, LinkIcon, FilterIcon, TwitterIcon, TwitchIcon } from 'lucide-react'
 
-const AttendeeRow = ({ avatar, name, events }) => (
+interface AttendeeRowProps {
+  avatar: string;
+  name: string;
+  events: string[]; // ou tout autre type approprié pour events
+}
+
+const AttendeeRow: React.FC<AttendeeRowProps> = ({ avatar, name, events }) => (
   <div className="flex items-start space-x-4 py-4 border-b last:border-b-0">
     <img src={avatar} alt={name} className="w-10 h-10 rounded-full" />
     <div className="flex-grow">

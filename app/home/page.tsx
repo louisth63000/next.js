@@ -5,7 +5,15 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, SearchIcon, MenuIcon } from 'lucide-react'
 
-const TournamentCard = ({ title, game, date, location, attendees, image }) => (
+interface TournamentCardProps {
+  title: string;
+  game: string;
+  date: string;
+  location: string;
+  attendees: string;
+  image: string;
+}
+const TournamentCard = ({ title, game, date, location, attendees, image }: TournamentCardProps) => (
   <Card className="overflow-hidden transition-all hover:shadow-lg">
     <img src={image} alt={title} className="w-full h-48 object-cover" />
     <CardHeader>

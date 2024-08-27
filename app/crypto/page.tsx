@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { TrophyIcon, MenuIcon, BellIcon, TrendingUpIcon, DollarSignIcon, PercentIcon, WalletIcon, EuroIcon } from 'lucide-react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { LucideIcon } from 'lucide-react';
 
 // Simulated crypto data
 const cryptoData = [
@@ -16,7 +17,13 @@ const cryptoData = [
   { date: '2023-07-01', price: 180 },
 ]
 
-const CryptoStatsCard = ({ title, value, icon: Icon }) => (
+
+type CryptoStatsCardProps = {
+  title: string;
+  value: string | number;
+  icon: LucideIcon;
+};
+const CryptoStatsCard = ({ title, value, icon: Icon }: CryptoStatsCardProps) => (
   <Card>
     <CardContent className="flex items-center p-6">
       <Icon className="h-8 w-8 text-blue-500 mr-4" />
@@ -26,7 +33,7 @@ const CryptoStatsCard = ({ title, value, icon: Icon }) => (
       </div>
     </CardContent>
   </Card>
-)
+);
 
 export default function Component() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

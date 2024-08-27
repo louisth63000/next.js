@@ -4,7 +4,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, MenuIcon, TwitterIcon, LinkIcon, CoinsIcon } from 'lucide-react'
 
-const EventCard = ({ image, date, title, subtitle, events, attendees }) => (
+interface EventCardProps {
+  image: string;
+  date: string;
+  title: string;
+  subtitle: string;
+  events: string;
+  attendees: string;
+}
+const EventCard = ({ image, date, title, subtitle, events, attendees }: EventCardProps) => (
   <Card className="overflow-hidden">
     <img src={image} alt={title} className="w-full h-32 object-cover" />
     <CardContent className="p-4">
@@ -21,14 +29,24 @@ const EventCard = ({ image, date, title, subtitle, events, attendees }) => (
   </Card>
 )
 
-const ResultCard = ({ placement, event }) => (
+
+interface ResultCardProps {
+  placement: string;
+  event: string;
+}
+const ResultCard = ({ placement, event }: ResultCardProps) => (
   <Card className="p-4">
     <p className="font-bold">{placement}</p>
     <p className="text-sm text-gray-600">{event}</p>
   </Card>
 )
 
-const LeaderboardCard = ({ game, rank, score }) => (
+interface LeaderboardCardProps {
+  game: string;
+  rank: number;
+  score: number;
+}
+const LeaderboardCard = ({ game, rank, score }: LeaderboardCardProps) => (
   <Card className="p-4">
     <h3 className="font-bold mb-2">{game}</h3>
     <p className="text-sm text-gray-600">Rank: {rank}</p>
