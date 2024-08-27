@@ -19,7 +19,7 @@ export default function Component() {
 
   const currentUser = {
     name: "John Doe",
-    avatar: "/placeholder.svg?height=32&width=32"
+    avatar: "https://placehold.co/32"
   }
 
   const teamMembers = [
@@ -78,8 +78,8 @@ export default function Component() {
           </CardHeader>
           <CardContent>
             <p className="text-gray-600">
-              Chez start.gg, notre mission est de créer la meilleure plateforme pour les tournois d'esports et les communautés de jeux. 
-              Nous croyons en la puissance du jeu pour rassembler les gens, favoriser la compétition saine et créer des opportunités pour les joueurs du monde entier.
+              {`Chez start.gg, notre mission est de créer la meilleure plateforme pour les tournois d'esports et les communautés de jeux. 
+              Nous croyons en la puissance du jeu pour rassembler les gens, favoriser la compétition saine et créer des opportunités pour les joueurs du monde entier.`}
             </p>
           </CardContent>
         </Card>
@@ -127,11 +127,11 @@ export default function Component() {
           </CardHeader>
           <CardContent>
             <p className="text-gray-600 mb-4">
-              Fondée en 2015, start.gg a commencé comme une petite startup avec une grande vision : révolutionner l'organisation des tournois d'esports. 
-              Au fil des ans, nous avons grandi pour devenir la plateforme de référence pour les organisateurs de tournois et les joueurs du monde entier.
+               {`Fondée en 2015, start.gg a commencé comme une petite startup avec une grande vision : révolutionner l'organisation des tournois d'esports. 
+              Au fil des ans, nous avons grandi pour devenir la plateforme de référence pour les organisateurs de tournois et les joueurs du monde entier. `}
             </p>
             <p className="text-gray-600">
-              Aujourd'hui, nous continuons à innover et à étendre nos services, toujours guidés par notre passion pour les jeux et notre engagement envers notre communauté.
+              {`Aujourd'hui, nous continuons à innover et à étendre nos services, toujours guidés par notre passion pour les jeux et notre engagement envers notre communauté.`}
             </p>
           </CardContent>
         </Card>
