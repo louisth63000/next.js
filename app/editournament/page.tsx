@@ -7,15 +7,33 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CalendarIcon, MapPinIcon, UsersIcon, TrophyIcon, MenuIcon, HomeIcon, LinkIcon, FilterIcon, EditIcon, CheckIcon, XIcon } from 'lucide-react'
 
-const MatchRow = ({ round, player1, player2, score1, score2, status, scheduledTime, onUpdateScore }) => {
-  const [isEditing, setIsEditing] = useState(false)
-  const [newScore1, setNewScore1] = useState(score1)
-  const [newScore2, setNewScore2] = useState(score2)
+interface Player {
+  name: string;
+  fullName: string;
+}
+
+interface MatchRowProps {
+  round: string;
+  player1: Player;
+  player2: Player;
+  score1?: number;
+  score2?: number;
+  status: string;
+  scheduledTime?: string;
+  onUpdateScore: (round: string, newScore1: number, newScore2: number) => void;
+}
+const MatchRow = ({ round, player1, player2, score1, score2, status, scheduledTime, onUpdateScore }: MatchRowProps) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [newScore1, setNewScore1] = useState(score1);
+  const [newScore2, setNewScore2] = useState(score2);
 
   const handleSave = () => {
-    onUpdateScore(round, newScore1, newScore2)
-    setIsEditing(false)
-  }
+    if (newScore1 !== undefined && newScore2 !== undefined) {
+      onUpdateScore(round, newScore1, newScore2);
+    }
+    setIsEditing(false);
+  };
+
 
   const handleCancel = () => {
     setNewScore1(score1)
@@ -138,14 +156,14 @@ export default function Component() {
     ]
   })
 
-  const handleUpdateScore = (round, newScore1, newScore2) => {
-    setMatches(prevMatches => ({
-      ...prevMatches,
-      finished: prevMatches.finished.map(match => 
-        match.round === round ? { ...match, score1: newScore1, score2: newScore2 } : match
-      )
-    }))
-  }
+const handleUpdateScore = (round: string, newScore1: number, newScore2: number) => {
+  setMatches(prevMatches => ({
+    ...prevMatches,
+    finished: prevMatches.finished.map(match =>
+      match.round === round ? { ...match, score1: newScore1, score2: newScore2 } : match
+    )
+  }));
+}
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
